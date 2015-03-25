@@ -1,0 +1,72 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage[3D]{movie15}
+%\usetheme{Antibes}
+\usetheme{Warsaw}
+%\usetheme{Marburg}
+%\usetheme[secheader]{Boadilla}
+%\usetheme{default}
+%\usetheme{Dresden}
+%\usetheme{Madrid}
+%\usecolortheme{seahorse}
+%\usecolortheme{crane}
+%\usecolortheme{albatross}
+%\usecolortheme{whale}
+\usecolortheme{beaver}
+
+\usefonttheme{structuresmallcapsserif}
+
+\title[Anatomical Features]{Multivariate models of inter-subject anatomical variability}
+\author{John Ashburner}
+\institute[j.ashburner@ucl.ac.uk]{Wellcome Trust Centre for Neuroimaging,\\
+UCL Institute of Neurology,\\
+12 Queen Square,\\
+London WC1N 3BG,\\
+UK.}
+\date{}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Introduction}
+    \subsection{Why apply pattern recognition to structural MRI?}
+    \subsection{Common ways to represent anatomical features}
+    \subsection{No Free Lunch and prior knowledge}
+    \subsection{Dimensionality reduction}
+        \subsubsection{Curse of dimensionality}  \include{CurseOfDimensionality}
+
+        \subsubsection{Prediction v Explanation} \include{PredictionVExplanation}
+        \subsubsection{Prediction}               \include{Prediction}
+        \subsubsection{Binary Classification}    \include{BinaryClassification}
+        \subsubsection{Kernel methods}           \include{KernelMethods}
+
+\section{Geometric Morphometrics}
+    \subsection{Early univariate morphometry}
+    \subsection{Early multivariate morphometry}
+    \subsection{The morphometrics ``revolution'' (landmarks)}
+    \subsection{Allometric relations}
+    \subsection{Automated shape estimation}
+
+    %\subsection{Geometric Variability}
+        \subsubsection{Principal Components}     \include{PrincipalComponents}
+
+\section{Similarity between brains}
+    \subsection{Distances between anatomies} \include{Distances}
+    \subsection{Non-linear distances (manifolds)}
+        \subsubsection{Manifolds}                \include{Manifolds}
+
+    \subsection{Image registration for measuring distances}
+    \subsection{Tangent space representations}
+    \subsection{Scalar momenta}
+    \subsection{Empirical examples}
+        \subsubsection{Data}                     \include{Data}
+        \subsubsection{Features}                 \include{Features}
+        \subsubsection{Results}                  \include{Results}
+
+%    \subsection{Examples of features}     \include{ExamplesOfFeatures}
+
+\section{Conclusion: What next?}
+
+\end{document}
