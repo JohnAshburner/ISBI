@@ -6,36 +6,36 @@
 \end{center}
 \end{frame}
 
-\begin{frame}
-\frametitle{Nearest-neighbour classification}
-\begin{columns}[c]
-\column{0.7\textwidth}
-\includegraphics[width=\textwidth]{voronoi}
-\column{0.3\textwidth}
-\begin{itemize}
-\item Not nice smooth separations.
-\item Lots of sharp corners.
-\item May be improved with \emph{K-nearest neighbours}.
-\end{itemize}
-\end{columns}
-\end{frame}
+%\begin{frame}
+%\frametitle{Nearest-neighbour classification}
+%\begin{columns}[c]
+%\column{0.7\textwidth}
+%\includegraphics[width=\textwidth]{voronoi}
+%\column{0.3\textwidth}
+%\begin{itemize}
+%\item Not nice smooth separations.
+%\item Lots of sharp corners.
+%\item May be improved with \emph{K-nearest neighbours}.
+%\end{itemize}
+%\end{columns}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{Rule-based approaches}
+%\begin{columns}[c]
+%\column{0.7\textwidth}
+%\includegraphics[width=\textwidth]{rule_based}
+%\column{0.3\textwidth}
+%\begin{itemize}
+%\item Not nice smooth separations.
+%\item Lots of sharp corners.
+%\end{itemize}
+%\end{columns}
+%\end{frame}
+
 
 \begin{frame}
-\frametitle{Rule-based approaches}
-\begin{columns}[c]
-\column{0.7\textwidth}
-\includegraphics[width=\textwidth]{rule_based}
-\column{0.3\textwidth}
-\begin{itemize}
-\item Not nice smooth separations.
-\item Lots of sharp corners.
-\end{itemize}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Corners matter in high-dimensions}
+\frametitle{Unintuitive behaviour in high-dimensions}
 \begin{columns}[c]
 \column{0.4\textwidth}
 \includegraphics[width=\textwidth]{circle}
@@ -44,17 +44,21 @@
 \end{columns}
 \end{frame}
 
+
+
+
 \begin{frame}
-\frametitle{Corners matter in high-dimensions}
+\frametitle{Unintuitive behaviour in high-dimensions}
 \begin{columns}[c]
 \column{0.2\textwidth}
-\includegraphics[width=.8\textwidth]{circle}
-
-\includegraphics[width=\textwidth]{sphere}
+\includegraphics[width=.8\textwidth]{circle}\par
+\includegraphics[width=\textwidth]{sphere}\par
 \column{0.8\textwidth}
 \includegraphics[width=\textwidth]{corners}
 \end{columns}
 \end{frame}
+
+
 
 
 \begin{frame}
@@ -79,23 +83,8 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-%\frametitle{Credentials}
-\begin{center}
-\includegraphics[height=0.7\textwidth]{pbaic2007}
-\end{center}
-\end{frame}
-
-\begin{frame}
-%\frametitle{Credentials}
-\begin{center}
-\includegraphics[height=0.7\textwidth]{pbaic2007_2}
-\end{center}
-\end{frame}
-
-
 %\begin{frame}
-%\frametitle{Data-driven feature selection}
+%\frametitle{``Data-driven feature selection''}
 %\begin{itemize}
 %\item Lots of effort on data-driven feature selection methods.
 %\item Many papers claim excellent results.
@@ -103,8 +92,10 @@
 %\end{itemize}
 %\end{frame}
 
+
+
 \begin{frame}
-\frametitle{Data-driven feature selection}
+\frametitle{``Data-driven feature selection''}
 %The main objectives of the feature selection step are to keep only informative features and to reduce the dimensionality of the feature space.
 \begin{quote}
 ``In our evaluation, two methods included a feature selection step: Voxel-STAND and Voxel-COMPARE.
@@ -129,8 +120,11 @@ Cuingnet et al. ``Automatic classification of patients with Alzheimer's disease 
 \end{center}
 \end{frame}
 
+
+
+
 \begin{frame}
-\frametitle{Data-driven feature selection}
+\frametitle{``Data-driven feature selection''}
 \begin{center}
 \includegraphics[height=0.55\textwidth]{data_driven_feature_selection.png}\par
 \begin{tiny}
@@ -138,6 +132,64 @@ Chu et al. ``Does feature selection improve classification accuracy? Impact of s
 \end{tiny}
 \end{center}
 \end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{``Data-driven feature selection''}
+...did not help the winning entry.
+\begin{center}
+\includegraphics[height=0.5\textwidth]{pbaic2007}\par
+\url{http://www.lrdc.pitt.edu/ebc/2007/2007.html}\par
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{``Data-driven feature selection''}
+\begin{center}
+\includegraphics[height=0.5\textwidth]{pbaic2007_2}\par
+\url{http://www.lrdc.pitt.edu/ebc/2007/2007.html}\par
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Modelling the nonlinearities}
+\begin{itemize}
+\item Can capture many nonlinearities by appropriately modelling the data.
+\item Allows nonlinear effects to be modelled by a linear classifier.
+\item Gives more interpretable characterisations of differences.
+\item May lead to more accurate predictions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Transformed images fall on manifolds}
+Rotating an image leads to points on a 1D manifold.\par
+\includegraphics[width=\textwidth]{manifold_rotation}
+
+Rigid-body motion leads to a 6-dimensional manifold (not shown).
+
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Local linearisation through smoothing}
+%\begin{columns}[c]
+%\column{0.7\textwidth}
+%\includegraphics[width=\textwidth]{manifold_unsmoothed}\par
+%\includegraphics[width=\textwidth]{manifold_smoothed}
+%\column{0.3\textwidth}
+%Spatial smoothing can make the manifolds more linear with respect to small misregistrations.
+%
+%Some information is inevitably lost.
+%\end{columns}
+%\end{frame}
 
 \begin{frame}
 \frametitle{One mode of geometric variability}
@@ -149,8 +201,10 @@ Simulated images\par
 Principal components\par
 \includegraphics[height=0.9\textwidth]{circles_pca}
 \end{columns}
-A suitable model would reduce these data to a single dimension.
+A suitable model would reduce this variability to a single dimension.
 \end{frame}
+
+
 
 
 \begin{frame}
@@ -163,6 +217,21 @@ Simulated images\par
 Principal components\par
 \includegraphics[height=0.9\textwidth]{things_pca}
 \end{columns}
-A suitable model would reduce these data to two dimensions.
+A suitable model would reduce this variability to two dimensions.
 \end{frame}
+
+%\begin{frame}
+%\frametitle{Simulated shapes}
+%\includegraphics[width=0.9\textwidth]{original}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{Simulated nonlinear variability}
+%\includegraphics[width=0.9\textwidth]{simulated}
+%\end{frame}
+
+%\begin{frame}
+%\frametitle{Simulated linear variability}
+%\includegraphics[width=0.9\textwidth]{simulated_lin}
+%\end{frame}
 

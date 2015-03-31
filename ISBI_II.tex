@@ -1,28 +1,24 @@
 \documentclass{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage[3D]{movie15}
-%\usetheme{Antibes}
 \usetheme{Warsaw}
-%\usetheme{Marburg}
-%\usetheme[secheader]{Boadilla}
-%\usetheme{default}
-%\usetheme{Dresden}
-%\usetheme{Madrid}
-%\usetheme{Singapore}
-\usecolortheme{seahorse}
-%\usecolortheme{crane}
-%\usecolortheme{albatross}
-%\usecolortheme{whale}
-%\usecolortheme{beaver}
-%\usecolortheme{dolphin}
-%\usecolortheme{seagull}
-
+\usecolortheme{beaver}
 \usefonttheme{structuresmallcapsserif}
-%\usefonttheme{structurebold}
+\setbeamertemplate{section page}
+{
+     \tableofcontents[currentsection,hideothersubsections]
+}
+\setbeamertemplate{subsection page}
+{
+     \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
+}
 
-\title[Machine Learning for Anatomical Neuroimaging]{Machine Learning for Anatomical Neuroimaging}
+\AtBeginSection{\frame{\sectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+\title[Anatomical Neuroimaging]{Machine Learning for Anatomical Neuroimaging}
 \author{John Ashburner}
-\institute[j.ashburner@ucl.ac.uk]{Wellcome Trust Centre for Neuroimaging,\\
+\institute[]{Wellcome Trust Centre for Neuroimaging,\\
 UCL Institute of Neurology,\\
 12 Queen Square,\\
 London WC1N 3BG,\\
@@ -40,15 +36,14 @@ UK.}
     \subsection{No Free Lunch and prior knowledge}                \include{NoFreeLunchAndPriorKnowledge}
     \subsection{Dimensionality reduction}                         \include{DimensionalityReduction}
 
-\section{Geometric Morphometrics}
-    \subsection{Early univariate morphometry}                     \include{EarlyUnivariateMorphometry}
-    \subsection{Early multivariate morphometry}                   \include{EarlyMultivariateMorphometry}
-    \subsection{The morphometrics ``revolution'' (landmarks)}     \include{TheMorphometricsRevolution}
+\section{Morphometrics}
+    \subsection{Traditional morphometrics}                        \include{TraditionalMorphometrics}
+    \subsection{Geometric morphometrics}                          \include{GeometricMorphometrics}
     \subsection{Allometric relations}                             \include{AllometricRelations}
-    \subsection{Automated shape estimation}                       \include{AutomatedShapeEstimation}
+%   \subsection{Automated shape estimation}                       \include{AutomatedShapeEstimation}
 
 \section{Similarity between brains}
-    \subsection{Distances between anatomies}                      \include{DistancesBetweenAnatomies}
+%   \subsection{Distances between anatomies}                      \include{DistancesBetweenAnatomies}
     \subsection{Non-linear distances (manifolds)}                 \include{NonLinearDistances}
     \subsection{Image registration for measuring distances}       \include{ImageRegistrationForMeasuringDistances}
     \subsection{Tangent space representations}                    \include{TangentSpaceRepresentations}
