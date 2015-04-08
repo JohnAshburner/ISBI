@@ -1,0 +1,20 @@
+
+\begin{frame}
+\frametitle{Log predictive probability}
+Some data are more easily classified than others.\par
+Probabilistic classifiers provide a level of confidence for each prediction.
+\begin{align*}
+p(y_*|{\bf x}_*,{\bf y},{\bf X},\theta)
+\end{align*}
+Quality of predictions can be assessed using the {\bf test log predictive probability}:
+\begin{align*}
+\tfrac{1}{m}\sum_{i=1}^m \log_2 p(y_{*i}\!=\!t_i|{\bf x}_{*i},{\bf y},{\bf X},\theta)
+\end{align*}
+After subtracting the baseline measure, this shows the average bits of information given by the model.\par
+\vspace{0.25cm}
+\begin{tiny}
+Rasmussen \& Williams. ``Gaussian Processes for Machine Learning'', MIT Press (2006).\par
+\url{http://www.gaussianprocess.org/gpml/}\par
+\end{tiny}
+\end{frame}
+

@@ -1,0 +1,30 @@
+\begin{frame}
+\frametitle{Ensemble learning}
+Combining predictions from weak learners.
+\begin{itemize}
+\item {\bf Bootstrap aggregating (bagging)}
+\begin{itemize}
+\item Train several weak classifiers, with different models or randomly drawn subsets of the data.
+\item Average their predictions with equal weight.
+\end{itemize}
+\item {\bf Boosting}
+\begin{itemize}
+\item A family of approaches, where models are weighted according to their accuracy.
+\item AdaBoost is popular, but has problems with target noise.
+\end{itemize}
+\item {\bf Bayesian model averaging}
+\begin{itemize}
+\item Really a model selection method.
+\item Relatively ineffective for combining models.
+\end{itemize}
+\item {\bf Bayesian model combination}
+\begin{itemize}
+\item Shows promise.
+\end{itemize}
+\end{itemize}
+\begin{tiny}
+Monteith, et al. ``Turning Bayesian model averaging into Bayesian model combination.'' Neural Networks (IJCNN), The 2011 International Joint Conference on. IEEE, 2011.\par
+\end{tiny}
+\end{frame}
+
+
