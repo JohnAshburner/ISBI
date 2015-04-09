@@ -278,6 +278,8 @@ print -depsc simple_naive_bayes.eps
 !epstopdf simple_naive_bayes.eps
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Support-vector classification
 clf
 subplot(2,2,1);
 [X1,X2] = ndgrid(x1,x2);
@@ -317,9 +319,79 @@ ylabel('Feature 2')
 drawnow
 print -depsc svc.eps
 !epstopdf svc.eps
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple classification
+clf
+subplot(2,2,1);
+[X1,X2] = ndgrid(x1,x2);
+XX=X'*X;
+w=svc(XX,p(1,:)'*2-1,1,1000);
+P = ones(size(X1))*w(end);
+for i=1:size(X,2),
+    P = P + w(i)*X(1,i)'*X1 + w(i)*X(2,i)'*X2;
+end
+P = P>0;
+imagesc(x1,x2,P');  set(gca,'Clim',[0 1]);
+hold on
+
+pl1 = plot(X(1,1:N1),X(2,1:N1),'ko'); set(pl1,'MarkerFaceColor',[1 1 1]);
+pl2 = plot(X(1,(N1+1):(N1+N2)),X(2,(N1+1):(N1+N2)),'wo'); set(pl2,'MarkerFaceColor',[0 0 0]);
+
+hold off
+axis image xy
+axis([mn(1),mx(1),mn(2),mx(2)]);
+title('Classification')
+xlabel('Feature 1')
+ylabel('Feature 2')
+
+drawnow
+print -depsc simple_classification.eps
+!epstopdf simple_classification.eps
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clf
+subplot(2,2,1)
+[X1,X2] = ndgrid(x1,x2);
+grp = [1 1 2];
+hparam = zeros(max(grp),2)+1e-4;
+
+[w,H,al,ll,Pb]=logistic_ridge_regression([X',ones(size(X,2),1)],p(1,:)',grp,hparam,[X1(:),X2(:), [], ones(numel(X1),1)]);
+Pb = reshape(Pb,size(X1));
+
+imagesc(x1,x2,Pb');  set(gca,'Clim',[0 1]);
+hold on
+contour(x1,x2,Pb',[0:0.1:1],'r');
+a = w(1:2);
+b = w(end);
+o = null(a')*mean(diff(x1));
+c = mean(X,2);
+z = -(a'*c + b)/(a'*a);
+%plot([c(1)+a(1)*z,c(1)+a(1)*100],[c(2)+a(2)*z,c(2)+a(2)*100],'w',...
+%     [c(1)+a(1)*z,c(1)-a(1)*100],[c(2)+a(2)*z,c(2)-a(2)*100],'k','LineWidth',2);
+
+pl1 = plot(X(1,1:N1),X(2,1:N1),'ko'); set(pl1,'MarkerFaceColor',[1 1 1]);
+pl2 = plot(X(1,(N1+1):(N1+N2)),X(2,(N1+1):(N1+N2)),'wo'); set(pl2,'MarkerFaceColor',[0 0 0]);
+
+hold off
+axis image xy
+axis([mn(1),mx(1),mn(2),mx(2)]);
+
+
+title('Probabilistic classification')
+xlabel('Feature 1')
+ylabel('Feature 2')
+
+
+drawnow
+print -depsc probabilistic_classification.eps
+!epstopdf probabilistic_classification.eps
 
 
 
