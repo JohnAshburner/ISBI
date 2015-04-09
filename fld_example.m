@@ -278,7 +278,45 @@ print -depsc simple_naive_bayes.eps
 !epstopdf simple_naive_bayes.eps
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+clf
+subplot(2,2,1);
+[X1,X2] = ndgrid(x1,x2);
+XX=X'*X;
+w=svc(XX,p(1,:)'*2-1,1,1000);
+P = ones(size(X1))*w(end);
+for i=1:size(X,2),
+    P = P + w(i)*X(1,i)'*X1 + w(i)*X(2,i)'*X2;
+end
+P = P>0;
+imagesc(x1,x2,P');  set(gca,'Clim',[0 1]);
+hold on
 
+a = X*w(1:(end-1));
+b = w(end);
+c = mean(X,2);
+z = -(a'*c + b)/(a'*a);
+plot([c(1)+a(1)*z,c(1)+a(1)*100],[c(2)+a(2)*z,c(2)+a(2)*100],'k',...
+     [c(1)+a(1)*z,c(1)-a(1)*100],[c(2)+a(2)*z,c(2)-a(2)*100],'w','LineWidth',2);
+o   = null(a');
+plot([-100; 100],[( 1 - b + 100*a(1))/a(2); ( 1 - b - 100*a(1))/a(2)],'k',...
+     [-100; 100],[(-1 - b + 100*a(1))/a(2); (-1 - b - 100*a(1))/a(2)],'w','LineWidth',1);
+
+pl1 = plot(X(1,1:N1),X(2,1:N1),'ko'); set(pl1,'MarkerFaceColor',[1 1 1]);
+pl2 = plot(X(1,(N1+1):(N1+N2)),X(2,(N1+1):(N1+N2)),'wo'); set(pl2,'MarkerFaceColor',[0 0 0]);
+
+ind = find(abs(w)>1e-3); ind=ind(ind<=size(p,2));
+plot(X(1,ind),X(2,ind),'r*');
+
+hold off
+axis image xy
+axis([mn(1),mx(1),mn(2),mx(2)]);
+title('SVC')
+xlabel('Feature 1')
+ylabel('Feature 2')
+
+drawnow
+print -depsc svc.eps
+!epstopdf svc.eps
 
 
 
@@ -373,14 +411,17 @@ a = X*w(1:(end-1));
 b = w(end);
 c = mean(X,2);
 z = -(a'*c + b)/(a'*a);
-plot([c(1)+a(1)*z,c(1)+a(1)*100],[c(2)+a(2)*z,c(2)+a(2)*100],'w',...
-     [c(1)+a(1)*z,c(1)-a(1)*100],[c(2)+a(2)*z,c(2)-a(2)*100],'k','LineWidth',2);
+plot([c(1)+a(1)*z,c(1)+a(1)*100],[c(2)+a(2)*z,c(2)+a(2)*100],'k',...
+     [c(1)+a(1)*z,c(1)-a(1)*100],[c(2)+a(2)*z,c(2)-a(2)*100],'w','LineWidth',2);
 o   = null(a');
-plot([-100; 100],[( 1 - b + 100*a(1))/a(2); ( 1 - b - 100*a(1))/a(2)],'w',...
-     [-100; 100],[(-1 - b + 100*a(1))/a(2); (-1 - b - 100*a(1))/a(2)],'k','LineWidth',1);
+plot([-100; 100],[( 1 - b + 100*a(1))/a(2); ( 1 - b - 100*a(1))/a(2)],'k',...
+     [-100; 100],[(-1 - b + 100*a(1))/a(2); (-1 - b - 100*a(1))/a(2)],'w','LineWidth',1);
 
 pl1 = plot(X(1,1:N1),X(2,1:N1),'ko'); set(pl1,'MarkerFaceColor',[1 1 1]);
 pl2 = plot(X(1,(N1+1):(N1+N2)),X(2,(N1+1):(N1+N2)),'wo'); set(pl2,'MarkerFaceColor',[0 0 0]);
+
+ind = find(abs(w)>1e-3); ind=ind(ind<=size(p,2));
+plot(X(1,ind),X(2,ind),'r*');
 
 hold off
 axis image xy

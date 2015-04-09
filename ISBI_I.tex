@@ -1,6 +1,6 @@
 \documentclass{beamer}
 \usepackage[latin1]{inputenc}
-\usepackage[3D]{movie15}
+%\usepackage[3D]{movie15}
 \usetheme{Warsaw}
 \usecolortheme{beaver}
 \usefonttheme{structuresmallcapsserif}
@@ -14,8 +14,8 @@
      \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
 }
 
-\AtBeginSection{\frame{\sectionpage}}
-\AtBeginSubsection{\frame{\subsectionpage}}
+%\AtBeginSection{\frame{\sectionpage}}
+%\AtBeginSubsection{\frame{\subsectionpage}}
 
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator{\diag}{diag}
@@ -42,11 +42,12 @@
     \subsection{Accuracy Measures}                                           \include{AccuracyMeasures}
     \subsection{Parameter Tuning}                                            \include{ParameterTuning}
 \section{Overview of the main methods}
-    \subsection{Simple Methods: Naive Bayes, Linear Discriminant Analysis}   \include{SimpleMethods}
-    \subsection{Kernel Methods: Support-Vector Machines, Gaussian Processes} \include{KernelMethods}
+    \subsection{Simple Generative Models: Naive Bayes, Linear Discriminant Analysis}       \include{SimpleMethods}
+    \subsection{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines} \include{KernelMethods}
     \subsection{Basic Regularization Methods}                                \include{BasicRegularisationMethods}
 \section{Model Averaging}
-    \subsection{Decision trees and Random Forests}                           \include{RandomForests}
     \subsection{Boosting \& Bagging}                                         \include{BoostingAndBagging}
+    \subsection{Decision trees and Random Forests}                           \include{RandomForests}
     \subsection{Tools: scikit-learn, pronto, nilearn, pymvpa}                \include{Tools}
 \end{document}
+

@@ -145,25 +145,25 @@ Wang, Lei, et al. ``Large deformation diffeomorphism and momentum based hippocam
 %\begin{eqnarray*}
 %{\bf K} = {\bf X}{\bf X}^T
 %\end{eqnarray*}
-%A simple spatial feature selection may be considered as the following, where ${\bf W}$ is a diagonal matrix of ones and zeros:
+%A simple spatial feature selection may be considered as the following, where $\boldsymbol\Sigma_0$ is a diagonal matrix of ones and zeros:
 %\begin{eqnarray*}
-%{\bf K} = {\bf X}{\bf W}{\bf X}^T
+%{\bf K} = {\bf X}\boldsymbol\Sigma_0{\bf X}^T
 %\end{eqnarray*}
-%However, ${\bf W}$ may be more complicated, for example encoding spatial smoothing, high-pass filtering or any number of other things.
+%However, $\boldsymbol\Sigma_0$ may be more complicated, for example encoding spatial smoothing, high-pass filtering or any number of other things.
 %\end{frame}
 
 %\begin{frame}
 %\frametitle{Inner Products}
-%This gives us an alternative way of measuring distances between vectors in a linear way, where ${\bf W}$ is symmetric and positive definite.
+%This gives us an alternative way of measuring distances between vectors in a linear way, where $\boldsymbol\Sigma_0$ is symmetric and positive definite.
 %\begin{eqnarray*}
-%d({\bf x}_1,{\bf x}_2) = \sqrt{({\bf x}_1 - {\bf x}_2)^T {\bf W} ({\bf x}_1 - {\bf x}_2)}
+%d({\bf x}_1,{\bf x}_2) = \sqrt{({\bf x}_1 - {\bf x}_2)^T \boldsymbol\Sigma_0 ({\bf x}_1 - {\bf x}_2)}
 %\end{eqnarray*}
 %
-%Usually, the operation ${\bf W}{\bf x}^T$ is performed as a convolution.  For example, when dealing with 2D data, we may convolve with the Laplacian operator.
+%Usually, the operation $\boldsymbol\Sigma_0{\bf x}^T$ is performed as a convolution.  For example, when dealing with 2D data, we may convolve with the Laplacian operator.
 %\begin{eqnarray*}
 %{\nabla}^2 {\bf x} = {\bf x} \ast \begin{pmatrix} 0 & -1 & 0\cr -1 & 4 & -1\cr 0 & -1 & 0\end{pmatrix}
 %\end{eqnarray*}
 %
-%Note that the actual form of ${\bf W}$ can vary, so we need to figure out what metric tensor is optimal.
+%Note that the actual form of $\boldsymbol\Sigma_0$ can vary, so we need to figure out what metric tensor is optimal.
 %\end{frame}
 

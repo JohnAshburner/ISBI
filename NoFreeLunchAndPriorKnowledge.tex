@@ -24,7 +24,7 @@ How do we use this knowledge?
 %\frametitle{Weighting the data}
 %\begin{Huge}
 %\begin{align*}
-%{\bf K} = {\bf X}{\bf W}{\bf X}^T
+%{\bf K} = {\bf X}\boldsymbol\Sigma_0{\bf X}^T
 %\end{align*}
 %\end{Huge}
 %\end{frame}
@@ -37,13 +37,13 @@ Linear kernel matrices may computed from the raw features.
 {\bf K} = {\bf X}{\bf X}^T
 \end{eqnarray*}
 \end{Large}
-A simple spatial feature selection may be considered as the following, where ${\bf W}$ is a diagonal matrix of ones and zeros:
+A simple spatial feature selection may be considered as the following, where $\boldsymbol\Sigma_0$ is a diagonal matrix of ones and zeros:
 \begin{Large}
 \begin{eqnarray*}
-{\bf K} = {\bf X}{\bf W}{\bf X}^T
+{\bf K} = {\bf X}\boldsymbol\Sigma_0{\bf X}^T
 \end{eqnarray*}
 \end{Large}
-However, ${\bf W}$ may be more complicated, for example encoding spatial smoothing, high-pass filtering or any number of other things.
+However, $\boldsymbol\Sigma_0$ may be more complicated, for example encoding spatial smoothing, high-pass filtering or any number of other things.
 \end{frame}
 
 \begin{frame}
@@ -54,7 +54,7 @@ However, ${\bf W}$ may be more complicated, for example encoding spatial smoothi
       so we need to extract information from publications.
 \item The neuroimaging literature is mostly blobs.
 \item These give pointers about how best to weight the data\\
-      (${\bf W} = diag({\bf w}), w_i \in \mathbb{R}^+$).
+      ($\boldsymbol\Sigma_0 = diag({\bf s}), s_i \in \mathbb{R}^+$).
 \end{itemize}
 \end{frame}
 
@@ -77,11 +77,11 @@ Chu et al. ``Does feature selection improve classification accuracy? Impact of s
 If we know that higher frequency signal is more likely to be noise.\par
 \begin{Large}
 \begin{eqnarray*}
-{\bf K} = {\bf X}{\bf W}{\bf X}^T
+{\bf K} = {\bf X}\boldsymbol\Sigma_0{\bf X}^T
 \end{eqnarray*}
 \end{Large}
 
-${\bf W}$ no longer diagional.
+$\boldsymbol\Sigma_0$ no longer diagional.
 \column{0.67\textwidth}
 \includegraphics[width=\textwidth]{brain-GM-smo}
 \end{columns}
@@ -90,17 +90,17 @@ ${\bf W}$ no longer diagional.
 
 %\begin{frame}
 %\frametitle{Inner Products}
-%This gives us an alternative way of measuring distances between vectors in a linear way, where ${\bf W}$ is symmetric and positive definite.
+%This gives us an alternative way of measuring distances between vectors in a linear way, where $\boldsymbol\Sigma_0$ is symmetric and positive definite.
 %\begin{eqnarray*}
-%d({\bf x}_1,{\bf x}_2) = \sqrt{({\bf x}_1 - {\bf x}_2)^T {\bf W} ({\bf x}_1 - {\bf x}_2)}
+%d({\bf x}_1,{\bf x}_2) = \sqrt{({\bf x}_1 - {\bf x}_2)^T \boldsymbol\Sigma_0 ({\bf x}_1 - {\bf x}_2)}
 %\end{eqnarray*}
 %
-%The operation ${\bf W}{\bf x}^T$ may be performed as a convolution.  For example, when dealing with 2D data, we may wish to convolve with a Laplacian operator.
+%The operation $\boldsymbol\Sigma_0{\bf x}^T$ may be performed as a convolution.  For example, when dealing with 2D data, we may wish to convolve with a Laplacian operator.
 %\begin{eqnarray*}
 %{\nabla}^2 {\bf x} = {\bf x} \ast \begin{pmatrix} 0 & -1 & 0\cr -1 & 4 & -1\cr 0 & -1 & 0\end{pmatrix}
 %\end{eqnarray*}
 %
 %Similarly, spatial smoothing may also be envisaged within the same framework.
-%%Note that the actual form of ${\bf W}$ can vary, so we need to figure out what metric tensor is optimal.
+%%Note that the actual form of $\boldsymbol\Sigma_0$ can vary, so we need to figure out what metric tensor is optimal.
 %\end{frame}
 
