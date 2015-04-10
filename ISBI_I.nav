@@ -1,71 +1,98 @@
 \beamer@endinputifotherversion {3.24pt}
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {1}{1}{1}{2/2}{Definitions}{0}}
+\headcommand {\beamer@framepages {2}{2}}
 \headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
-\headcommand {\slideentry {1}{0}{2}{2/2}{}{0}}
-\headcommand {\beamer@framepages {2}{2}}
-\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Classification and Regression}}\headcommand {\beamer@subsectionpages {2}{2}}
-\headcommand {\slideentry {1}{1}{1}{3/3}{Classification and Regression}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Definitions}}\headcommand {\beamer@subsectionpages {2}{1}}
+\headcommand {\slideentry {1}{2}{1}{3/3}{Classification and Regression}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{4}{Curse of Dimensionality}}\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\slideentry {1}{2}{1}{4/4}{Curse of Dimensionality}{0}}
+\headcommand {\slideentry {1}{2}{2}{4/4}{Classification and Regression}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {1}{2}{2}{5/5}{Curse of Dimensionality}{0}}
+\headcommand {\slideentry {1}{2}{3}{5/5}{Classification and Regression}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {1}{2}{3}{6/6}{Curse of Dimensionality}{0}}
+\headcommand {\slideentry {1}{2}{4}{6/6}{Classification and Regression}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {1}{2}{4}{7/7}{Curse of Dimensionality}{0}}
+\headcommand {\slideentry {1}{2}{5}{7/7}{Classification and Regression}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {1}{2}{5}{8/8}{Curse of Dimensionality}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{3}{Classification and Regression}}\headcommand {\beamer@subsectionpages {2}{2}}
+\headcommand {\slideentry {1}{3}{1}{8/8}{Curse of Dimensionality}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {1}{2}{6}{9/9}{Curse of Dimensionality}{0}}
+\headcommand {\slideentry {1}{3}{2}{9/9}{Curse of Dimensionality}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\sectionentry {2}{Generalization of learned models across datasets}{10}{Generalization of learned models across datasets}{0}}
-\headcommand {\beamer@sectionpages {2}{9}}
-\headcommand {\beamer@subsectionpages {4}{9}}
-\headcommand {\slideentry {2}{0}{7}{10/10}{}{0}}
+\headcommand {\slideentry {1}{3}{3}{10/10}{Curse of Dimensionality}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{11}{Cross-Validation}}\headcommand {\beamer@subsectionpages {10}{10}}
-\headcommand {\slideentry {2}{1}{1}{11/11}{Cross-Validation}{0}}
+\headcommand {\slideentry {1}{3}{4}{11/11}{Curse of Dimensionality}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{12}{Accuracy Measures}}\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\slideentry {2}{2}{1}{12/12}{Accuracy Measures}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{8}{Curse of Dimensionality}}\headcommand {\beamer@subsectionpages {3}{7}}
+\headcommand {\slideentry {2}{1}{1}{12/12}{Cross-Validation}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{13}{Parameter Tuning}}\headcommand {\beamer@subsectionpages {12}{12}}
-\headcommand {\slideentry {2}{3}{1}{13/13}{Parameter Tuning}{0}}
+\headcommand {\slideentry {2}{1}{2}{13/13}{Cross-Validation}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {3}{Overview of the main methods}{14}{Overview of the main methods}{0}}
-\headcommand {\beamer@sectionpages {10}{13}}
-\headcommand {\beamer@subsectionpages {13}{13}}
-\headcommand {\slideentry {3}{0}{2}{14/14}{}{0}}
+\headcommand {\slideentry {2}{1}{3}{14/14}{Cross-Validation}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{15}{Simple Methods: Naive Bayes, Linear Discriminant Analysis}}\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\slideentry {3}{1}{1}{15/15}{Simple Methods: Naive Bayes, Linear Discriminant Analysis}{0}}
+\headcommand {\sectionentry {2}{Generalization of learned models across datasets}{12}{Generalization of learned models across datasets}{0}}
+\headcommand {\beamer@sectionpages {2}{11}}
+\headcommand {\beamer@subsectionpages {8}{11}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Cross-Validation}}\headcommand {\beamer@subsectionpages {12}{11}}
+\headcommand {\slideentry {2}{2}{1}{15/15}{Accuracy Measures}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{16}{Kernel Methods: Support-Vector Machines, Gaussian Processes}}\headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\slideentry {3}{2}{1}{16/16}{Kernel Methods: Support-Vector Machines, Gaussian Processes}{0}}
+\headcommand {\slideentry {2}{2}{2}{16/16}{Accuracy Measures}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{17}{Basic Regularization Methods}}\headcommand {\beamer@subsectionpages {16}{16}}
-\headcommand {\slideentry {3}{3}{1}{17/17}{Basic Regularization Methods}{0}}
+\headcommand {\slideentry {2}{2}{3}{17/17}{Accuracy Measures}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\sectionentry {4}{Model Averaging}{18}{Model Averaging}{0}}
-\headcommand {\beamer@sectionpages {14}{17}}
-\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\slideentry {4}{0}{2}{18/18}{}{0}}
+\headcommand {\slideentry {2}{2}{4}{18/18}{Accuracy Measures}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{19}{Decision trees and Random Forests}}\headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\slideentry {4}{1}{1}{19/19}{Decision trees and Random Forests}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{15}{Accuracy Measures}}\headcommand {\beamer@subsectionpages {12}{14}}
+\headcommand {\slideentry {3}{1}{1}{19/19}{Simple Generative Models: Naive Bayes, Linear Discriminant Analysis}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{20}{Boosting \& Bagging}}\headcommand {\beamer@subsectionpages {19}{19}}
-\headcommand {\slideentry {4}{2}{1}{20/20}{Boosting \& Bagging}{0}}
+\headcommand {\slideentry {3}{1}{2}{20/20}{Simple Generative Models: Naive Bayes, Linear Discriminant Analysis}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{21}{Tools: scikit-learn, pronto, nilearn, pymvpa}}\headcommand {\beamer@subsectionpages {20}{20}}
-\headcommand {\slideentry {4}{3}{1}{21/21}{Tools: scikit-learn, pronto, nilearn, pymvpa}{0}}
+\headcommand {\slideentry {3}{1}{3}{21/21}{Simple Generative Models: Naive Bayes, Linear Discriminant Analysis}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@partpages {1}{21}}
-\headcommand {\beamer@subsectionpages {21}{21}}
-\headcommand {\beamer@sectionpages {18}{21}}
-\headcommand {\beamer@documentpages {21}}
-\headcommand {\def \inserttotalframenumber {21}}
+\headcommand {\slideentry {3}{1}{4}{22/22}{Simple Generative Models: Naive Bayes, Linear Discriminant Analysis}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{19}{Parameter Tuning}}\headcommand {\beamer@subsectionpages {15}{18}}
+\headcommand {\sectionentry {3}{Overview of the main methods}{19}{Overview of the main methods}{0}}
+\headcommand {\beamer@sectionpages {12}{18}}
+\headcommand {\beamer@subsectionpages {19}{18}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{19}{Simple Generative Models: Naive Bayes, Linear Discriminant Analysis}}\headcommand {\beamer@subsectionpages {19}{18}}
+\headcommand {\slideentry {3}{2}{1}{23/23}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {3}{2}{2}{24/24}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {3}{2}{3}{25/25}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\slideentry {3}{2}{4}{26/26}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {3}{2}{5}{27/27}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {3}{2}{6}{28/28}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {3}{2}{7}{29/29}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {3}{2}{8}{30/30}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {3}{2}{9}{31/31}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {3}{2}{10}{32/32}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\slideentry {3}{2}{11}{33/33}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\slideentry {3}{2}{12}{34/34}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{23}{Simple Discriminative Models: Gaussian Processes, Support-Vector Machines}}\headcommand {\beamer@subsectionpages {19}{22}}
+\headcommand {\slideentry {4}{1}{1}{35/35}{Boosting \& Bagging}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{35}{Basic Regularization Methods}}\headcommand {\beamer@subsectionpages {23}{34}}
+\headcommand {\sectionentry {4}{Model Averaging}{35}{Model Averaging}{0}}
+\headcommand {\beamer@sectionpages {19}{34}}
+\headcommand {\beamer@subsectionpages {35}{34}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{35}{Boosting \& Bagging}}\headcommand {\beamer@subsectionpages {35}{34}}
+\headcommand {\beamer@partpages {1}{35}}
+\headcommand {\beamer@subsectionpages {36}{35}}
+\headcommand {\beamer@sectionpages {35}{35}}
+\headcommand {\beamer@documentpages {35}}
+\headcommand {\def \inserttotalframenumber {35}}

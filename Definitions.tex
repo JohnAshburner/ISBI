@@ -1,0 +1,74 @@
+\begin{frame}
+\frametitle{}
+\includegraphics[width=\textwidth]{sklearn_material/ml_map.png}
+% Note: need some adaptation. Should not be sklearn specific
+% useful to clarify the different branches of ML
+% 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Some key concepts}
+
+\end{frame}
+
+
+
+\begin{comment}
+\begin{frame}
+\frametitle{General setting}
+We have a training dataset of $n$ observations, each consisting of an input ${\bf x}_i$ and a target $y_i$.\par
+Each input, ${\bf x}_i$, consists of a vector of $p$ features.
+\begin{align*}
+\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}
+\end{align*}
+
+The aim is to predict the target for a new input ${\bf x}_*$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Classification}
+\begin{columns}
+\column{0.4\textwidth}
+Targets (${\bf y}$) are categorical labels.\par
+Train with $\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}$ and use result to make best guess of $y_*$ given ${\bf x}_*$.
+\column{0.6\textwidth}
+\includegraphics[width=\textwidth]{simple_classification}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Probabilistic classification}
+\begin{columns}
+\column{0.4\textwidth}
+Targets (${\bf y}$) are categorical labels.\par
+Train with $\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}$ and compute $P(y_*=1 | {\bf x}_*, \mathcal{D})$.
+\column{0.6\textwidth}
+\includegraphics[width=\textwidth]{probabilistic_classification}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression}
+\begin{columns}
+\column{0.4\textwidth}
+Targets (${\bf y}$) are continuous real variables.\par
+Train with $\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}$ and compute $p(y_* | {\bf x}_*, \mathcal{D})$.
+\column{0.6\textwidth}
+\includegraphics[width=\textwidth]{regression}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Many other settings}
+\begin{itemize}
+\item {\bf Multi-class classification} when there are more than two possible categories.
+\item {\bf Ordinal regression} for classification when there is some ordering of the categories.\par
+\begin{tiny}
+Chu, Wei, and Zoubin Ghahramani. ``Gaussian processes for ordinal regression.'' In Journal of Machine Learning Research, pp. 1019-1041. 2005.\par
+\end{tiny}
+\item {\bf Multi-task learning} when there are multiple targets to predict, which may be related.
+\item etc
+\end{itemize}
+\end{frame}
+\end{comment}
