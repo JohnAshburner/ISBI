@@ -44,3 +44,22 @@ Some approximations/alternatives to the Bayesian approach:
 \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{Model selection by nested cross-validation}
+
+Inner cross-validation loop used to evaluate model's performance on a
+pre-defined grid of parameter and retain the best one.
+
+\begin{itemize}
+\item Safe, but costly.
+\item Supported by some libraries (e.g. scikit-learn).
+\includegraphics[width=\textwidth]{sklearn_material/grid}\\
+\includegraphics[width=.65\textwidth]{sklearn_material/grid_search}
+\item Some estimators have path model, hence allow faster evaluation
+  (e.g. LASSO).
+\item Randomized techniques also exist, sometimes more efficient.
+\item \textbf{Caveat:} inner cross-validation loop $\neq$ outer
+  cross-validation loop for parameter evaluation
+\end{itemize}
+\end{frame} 
+
