@@ -130,10 +130,33 @@ where $\sigma$ is some squashing function, eg:
 \item Heaviside step function.
 \item Logistic function (inverse of Logit).
 \item Normal CDF (inverse of Probit).
+\item Hinge loss (support vector machines)
 \end{itemize}
 \column{0.5\textwidth}
 \includegraphics[width=.75\textwidth]{squashing}
+
+\textbf{Bertrand: maybe a distinction should be introduced here between the decision function (typically the sign function) and the loss function used for training.}
+
 \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Discriminative models for classification: convexity} 
+
+In practice, the hinge and logistic losses yield a convex estimation
+problem and are preferred.
+
+\[
+\text{min}_{\mathbf{w}} \; \mathcal{L}(y,\mathbf{X},\mathbf{w}) + \lambda\mathcal{R}(\mathbf{w})
+\]
+(M-estimators framework)
+\begin{itemize}
+\item $\mathcal{L}$ is the loss function (hinge, logistic, quadratic...)
+\item $\mathcal{R}$ is the regularizer (typically a norm on $\mathbf{w}$) 
+\item $\lambda > 0$ balances the two terms
+\end{itemize}
+$\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (SVMs, $\ell_2$-logistic, $\ell_1$-logistic).
+
 \end{frame}
 
 \begin{frame}
@@ -141,7 +164,7 @@ where $\sigma$ is some squashing function, eg:
 \begin{columns}[c]
 \column{0.5\textwidth}
 Integrating over the uncertainty of the separating hyperplane allows probabilistic predictions further from the training data.\par
-This is not usually done for methods such as the revelance-vector machine (RVM).\par
+This is not usually done for methods such as the relevance-vector machine (RVM).\par
 \vspace{0.25cm}
 \begin{tiny}
 Rasmussen, Carl Edward, and Joaquin Quinonero-Candela. ``Healing the relevance vector machine through augmentation.'' In Proceedings of the 22nd international conference on Machine learning, pp. 689-696. ACM, 2005.\par
