@@ -17,12 +17,12 @@
 
 \begin{frame}
 \frametitle{Geodesic Shooting}
-At the solution, gradients of the objective function should vanish:
+At the solution, gradients of the LDDMM objective function should vanish:
 \begin{align*}
 {\bf L}^{\dagger}{\bf L} {\bf v}_{0} + \frac{1}{\sigma^2} \det | {\bf D}{\boldsymbol\varphi}_{1} | (f \circ {\boldsymbol\varphi}_1 - \mu)(\nabla \mu) = 0
 \end{align*}
 
-Re-expressiong this, we see that the initial velocity and momentum is given by:
+Re-expressiong this, we see that the initial velocity (and momentum) is given by:
 \begin{align*}
 {\bf L}^{\dagger}{\bf L} {\bf v}_{0} = {\bf u}_0 = {\frac{1}{\sigma^2} (\nabla \mu)} {\det | {\bf D}{\boldsymbol\varphi}_{1} | (\mu - f \circ {\boldsymbol\varphi}_1)}
 \end{align*}
@@ -58,7 +58,7 @@ Singh, Fletcher, Preston, Ha, King, Marron, Wiener \& Joshi (2010). \emph{Multiv
 \frametitle{Example Images}
 Some example images.
 \begin{center}
-\includegraphics[width=0.9\textwidth]{original}
+\includegraphics[width=0.8\textwidth]{original}
 \end{center}
 \end{frame}
 
@@ -66,9 +66,9 @@ Some example images.
 
 \begin{frame}
 \frametitle{Scalar Momentum}
-Scalar momentum after aligning the examples to a common template.
+Scalar momenta after aligning to a common template.
 \begin{center}
-\includegraphics[width=0.9\textwidth]{alpha}
+\includegraphics[width=0.8\textwidth]{alpha}
 \end{center}
 \end{frame}
 
@@ -76,9 +76,9 @@ Scalar momentum after aligning the examples to a common template.
 
 \begin{frame}
 \frametitle{Reconstructed Images}
-Images reconstructed using just the template and scalar momentum.
+Images reconstructed from scalar momenta (and template).
 \begin{center}
-\includegraphics[width=0.9\textwidth]{reconstructed}
+\includegraphics[width=0.8\textwidth]{reconstructed}
 \end{center}
 \end{frame}
 

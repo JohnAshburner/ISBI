@@ -1,14 +1,14 @@
 \begin{frame}
 \frametitle{Feature engineering}
-\emph{First-timers are often surprised by how {\bf little time in a machine learning project is spent actually doing machine learning}.
+\emph{\small{First-timers are often surprised by how {\bf little time in a machine learning project is spent actually doing machine learning}.
 But it makes sense if you consider how time-consuming it is to gather data, integrate it, clean it and pre-process it, and how much {\bf trial and error can go into feature design}.
 Also, machine learning is not a one-shot process of building a data set and running a learner, but rather an iterative process of running the learner, analyzing the results, modifying the data and/or the learner, and repeating.
 Learning is often the quickest part of this, but that's because we've already mastered it pretty well!
 {\bf Feature engineering is more difficult because it's domain-specific, while learners can be largely general-purpose.}
 However, there is no sharp frontier between the two, and this is another reason {\bf the most useful learners are those that facilitate incorporating knowledge}.
-}
+\par}}
 
-\vspace{1cm}
+\vspace{0.25cm}
 \begin{tiny}
 Domingos, Pedro. ``A few useful things to know about machine learning.'' Communications of the ACM 55, no. 10 (2012): 78-87.\par
 \end{tiny}
@@ -57,10 +57,11 @@ Other features include:
 \begin{itemize}
 \item Cortical thickness.
 \item Shape features.
-\item Principal / Independent component weights.
+\item PCA/ICA weights.
 \item Lesion maps.
 \item etc
 \end{itemize}
+{\bf Data need aligning.}
 \column{0.67\textwidth}
 \includegraphics[width=\textwidth]{brain-raw}
 \end{columns}

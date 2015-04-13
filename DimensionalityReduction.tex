@@ -1,10 +1,10 @@
 
-\begin{frame}
-\frametitle{Curse of dimensionality}
-\begin{center}
-{\Huge Large $p$, small $n$.\par}
-\end{center}
-\end{frame}
+%\begin{frame}
+%\frametitle{Curse of dimensionality}
+%\begin{center}
+%{\Huge Large $p$, small $n$.\par}
+%\end{center}
+%\end{frame}
 
 %\begin{frame}
 %\frametitle{Nearest-neighbour classification}
@@ -34,29 +34,29 @@
 %\end{frame}
 
 
-\begin{frame}
-\frametitle{Unintuitive behaviour in high-dimensions}
-\begin{columns}[c]
-\column{0.4\textwidth}
-\includegraphics[width=\textwidth]{circle}
-\column{0.6\textwidth}
-\includegraphics[width=\textwidth]{sphere}
-\end{columns}
-\end{frame}
+%\begin{frame}
+%\frametitle{Unintuitive behaviour in high-dimensions}
+%\begin{columns}[c]
+%\column{0.4\textwidth}
+%\includegraphics[width=\textwidth]{circle}
+%\column{0.6\textwidth}
+%\includegraphics[width=\textwidth]{sphere}
+%\end{columns}
+%\end{frame}
 
 
 
 
-\begin{frame}
-\frametitle{Unintuitive behaviour in high-dimensions}
-\begin{columns}[c]
-\column{0.2\textwidth}
-\includegraphics[width=.8\textwidth]{circle}\par
-\includegraphics[width=\textwidth]{sphere}\par
-\column{0.8\textwidth}
-\includegraphics[width=\textwidth]{corners}
-\end{columns}
-\end{frame}
+%\begin{frame}
+%\frametitle{Unintuitive behaviour in high-dimensions}
+%\begin{columns}[c]
+%\column{0.2\textwidth}
+%\includegraphics[width=.8\textwidth]{circle}\par
+%\includegraphics[width=\textwidth]{sphere}\par
+%\column{0.8\textwidth}
+%\includegraphics[width=\textwidth]{corners}
+%\end{columns}
+%\end{frame}
 
 
 
@@ -66,8 +66,8 @@
 \begin{itemize}
 \item Lots of effort on data-driven feature selection methods.
 \begin{itemize}
-\item Involves estimating weighting matrix such that\\
-      $\boldsymbol\Sigma_0 = diag({\bf s}), s_i \in \{0,1\}$.
+\item Involves estimating\\
+      $\boldsymbol\Sigma_0 = diag({\bf s}), s_i \in \{0,w\}$, where $w \in \mathcal{R}^+$.
 \item Lots of parameters needed to achieve this.
 \end{itemize}
 \item Many papers claim excellent results.
@@ -161,8 +161,9 @@ Chu et al. ``Does feature selection improve classification accuracy? Impact of s
 
 \begin{frame}
 \frametitle{Modelling the nonlinearities}
+Instead of using nonlinear pattern recognition methods...
 \begin{itemize}
-\item Can capture many nonlinearities by appropriately modelling the data.
+\item Capture nonlinearities by appropriate preprocessing.
 \item Allows nonlinear effects to be modelled by a linear classifier.
 \item Gives more interpretable characterisations of differences.
 \item May lead to more accurate predictions.
@@ -171,7 +172,7 @@ Chu et al. ``Does feature selection improve classification accuracy? Impact of s
 
 \begin{frame}
 \frametitle{Transformed images fall on manifolds}
-Rotating an image leads to points on a 1D manifold.\par
+Rotating an image leads to points on a manifold.\par
 \includegraphics[width=\textwidth]{manifold_rotation}
 
 Rigid-body motion leads to a 6-dimensional manifold (not shown).

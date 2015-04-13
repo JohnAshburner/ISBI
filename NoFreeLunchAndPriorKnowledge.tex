@@ -31,19 +31,19 @@ How do we use this knowledge?
 
 \begin{frame}
 \frametitle{Kernel Matrices}
-Linear kernel matrices may computed from the raw features.
+Linear kernel matrices are often computed from the raw features:\par
 \begin{Large}
 \begin{eqnarray*}
 {\bf K} = {\bf X}{\bf X}^T
 \end{eqnarray*}
 \end{Large}
-A simple spatial feature selection may be considered as the following, where $\boldsymbol\Sigma_0$ is a diagonal matrix of ones and zeros:
+A simple spatial feature selection may be considered as the following, where $\boldsymbol\Sigma_0$ is a (scaled) diagonal matrix of ones and zeros:\par
 \begin{Large}
 \begin{eqnarray*}
 {\bf K} = {\bf X}\boldsymbol\Sigma_0{\bf X}^T
 \end{eqnarray*}
 \end{Large}
-However, $\boldsymbol\Sigma_0$ may be more complicated, for example encoding spatial smoothing, high-pass filtering or any number of other things.
+$\boldsymbol\Sigma_0$ may be more complicated, for example encoding spatial smoothing, high-pass filtering or any number of other things.\par
 \end{frame}
 
 \begin{frame}

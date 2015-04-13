@@ -3,13 +3,13 @@
 \begin{columns}[c]
 \column{0.7\textwidth}
 \begin{itemize}
-\item Image registration measures distances between images.
-\item Often involves minimising the sum of two terms:
+\item Image registration finds shortest distance between images.
+\item Often formulated to minimise the sum of two terms:
 \begin{itemize}
 \item Distance between the image intensities.
 \item Distance of the deformation from the identity.
 \end{itemize}
-\item The sum of these terms gives the distance.
+\item The sum of these gives a distance.
 \end{itemize}
 \column{0.3\textwidth}
 \includegraphics[width=\textwidth]{shoot2d}
@@ -23,11 +23,10 @@
 \begin{eqnarray*}
 \mathcal{E}  =   \frac{1}{2} \int_{t=0}^1  || {\bf L} {\bf v}_t ||^2 dt +
                  \frac{1}{2\sigma^2} || f - \mu\left({\boldsymbol\varphi}_1^{-1}\right)||^2\\
-\text{  where } {\boldsymbol\varphi}_0 = \mathrm{Id} \text{, } \frac{d{\boldsymbol\varphi}}{dt} = {\bf v}_t\left({\boldsymbol\varphi}_t\right)
+\text{  where } {\boldsymbol\varphi}_0 = \mathrm{id} \text{, } \frac{d{\boldsymbol\varphi}}{dt} = {\bf v}_t\left({\boldsymbol\varphi}_t\right)
 \end{eqnarray*}
-
-The first term minimises the squared distance measure of the deformations, whereas the second term simply minimises the difference between the warped template and the individual scan.
-
+First term is a squared deformation distance measure.\par
+Second term is the squared difference between images.\par
 The objective is to estimate a series of velocity fields (${\bf v}_t$).\par
 %\includegraphics[width=\textwidth]{trajectory}
 %These may be conceptualised as
@@ -36,10 +35,8 @@ The objective is to estimate a series of velocity fields (${\bf v}_t$).\par
 %\end{eqnarray*}
 \vspace{.25cm}
 \begin{tiny}
-Beg, MF, Miller, MI, Trouv{\'e}, A \& Younes, L. \emph{Computing large deformation metric mappings via geodesic flows of diffeomorphisms}. International Journal of Computer Vision 61(2):139--157 (2005).
-
+Beg, MF, Miller, MI, Trouv{\'e}, A \& Younes, L. \emph{Computing large deformation metric mappings via geodesic flows of diffeomorphisms}. International Journal of Computer Vision 61(2):139--157 (2005).\par
 \end{tiny}
-
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

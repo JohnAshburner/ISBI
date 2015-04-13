@@ -4,16 +4,16 @@
 \usetheme{Warsaw}
 \usecolortheme{beaver}
 \usefonttheme{structuresmallcapsserif}
-\setbeamertemplate{section page}
-{
-     \tableofcontents[currentsection,hideothersubsections]
-}
+%\setbeamertemplate{section page}
+%{
+%     \tableofcontents[currentsection,hideothersubsections]
+%}
 \setbeamertemplate{subsection page}
 {
      \tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/shaded/hide]
 }
 
-\AtBeginSection{\frame{\sectionpage}}
+%\AtBeginSection{\frame{\sectionpage}}
 \AtBeginSubsection{\frame{\subsectionpage}}
 
 \title[Anatomical Neuroimaging]{Machine Learning for Anatomical Neuroimaging}
@@ -51,6 +51,9 @@ UK.}
     \subsection{Empirical examples}                               \include{EmpiricalExamples}
 
 \section{Conclusion: What next?}
-                                                                  \include{Speculation}
+    \subsection{Bigger data}                                      \include{BiggerBetterData}
+    \subsection{Dealing label uncertainty}                        \include{UncertainLabels}
+    \subsection{Improved pre-processing}                          \include{GenerativeModelling}
+    \subsection{Visualising differences}                          \include{VisualisingDifferences}
 \end{document}
 

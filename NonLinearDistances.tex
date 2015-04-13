@@ -62,12 +62,12 @@ Decompose a curved path into a series of short line segments, and add the length
 \includegraphics[width=\textwidth]{trajectory0}\par
 We can consider a large deformation as the composition of a series of small deformations:
 \begin{eqnarray*}
-{\boldsymbol\varphi}_{1} = \left(\mathrm{Id} + {\bf v}_{t_{N-1}}\right) \circ  \left(\mathrm{Id} + {\bf v}_{t_{N-2}}\right) \circ ... \circ \left(\mathrm{Id} + {\bf v}_{t_1}\right) \circ \left(\mathrm{Id} + {\bf v}_0\right)
+{\boldsymbol\varphi}_{1} = \left(\mathrm{id} + \tfrac{{\bf v}_{t_{N-1}}}{N}\right) \circ  \left(\mathrm{id} + \tfrac{{\bf v}_{t_{N-2}}}{N}\right) \circ ... \circ \left(\mathrm{id} + \tfrac{{\bf v}_{t_1}}{N}\right) \circ \left(\mathrm{id} + \tfrac{{\bf v}_0}{N}\right)
 \end{eqnarray*}
 
 The inverse of the deformation can be computed from:
 \begin{eqnarray*}
-{\boldsymbol\vartheta}_{1} = \left(\mathrm{Id} - {\bf v}_0\right) \circ  \left(\mathrm{Id} - {\bf v}_{t_1}\right) \circ ... \circ \left(\mathrm{Id} - {\bf v}_{t_{N-2}}\right) \circ \left(\mathrm{Id} - {\bf v}_{t_{N-1}}\right)
+{\boldsymbol\vartheta}_{1} = \left(\mathrm{id} - \tfrac{{\bf v}_0}{N}\right) \circ  \left(\mathrm{id} - \tfrac{{\bf v}_{t_1}}{N}\right) \circ ... \circ \left(\mathrm{id} - \tfrac{{\bf v}_{t_{N-2}}}{N}\right) \circ \left(\mathrm{id} - \tfrac{{\bf v}_{t_{N-1}}}{N}\right)
 \end{eqnarray*}
 
 \end{frame}
@@ -82,7 +82,7 @@ d = \frac{1}{N}\sum_{n=0}^{N-1} || {\bf L} {\bf v}_{t_n} ||
 \end{eqnarray*}
 %\includegraphics[width=\textwidth]{trajectory0}
 
-If $N$ approaches infinity (and we use small deformations of $Id + \frac{1}{N}{\bf v}_t$), the evolution of a deformation may be conceptualised as integrating the following equation:
+If $N$ approaches infinity (and we use small deformations of $\mathrm{id} + \frac{1}{N}{\bf v}_t$), the evolution of a deformation may be conceptualised as integrating the following equation:
 \begin{eqnarray*}
 \frac{d {\boldsymbol\varphi}}{d t} = {\bf v}_t ({\boldsymbol\varphi})
 \end{eqnarray*}

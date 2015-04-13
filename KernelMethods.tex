@@ -58,16 +58,15 @@ Estimated parameters may be $\sigma^2$, and parameters encoding $\boldsymbol\Sig
 \begin{frame}
 \frametitle{Kernel methods: Woodbury matrix identity}
 \begin{align*}
-{\bf B}^{-1} = & \left(\sigma^{-2}{\bf X}^T{\bf X} + \boldsymbol\Sigma_0^{-1}\right)^{-1}\\
-             = & \boldsymbol\Sigma_0 - \boldsymbol\Sigma_0 {\bf X}^T({\bf I}\sigma^2 + {\bf X} \boldsymbol\Sigma_0 {\bf X}^T)^{-1} {\bf X} \boldsymbol\Sigma_0
+{\bf B}^{-1} = & \left(\sigma^{-2}{\bf X}^T{\bf X} + \boldsymbol\Sigma_0^{-1}\right)^{-1} & \text{ invert a } p \times p \text{ matrix}\\
+             = & \boldsymbol\Sigma_0 - \boldsymbol\Sigma_0 {\bf X}^T({\bf I}\sigma^2 + {\bf X} \boldsymbol\Sigma_0 {\bf X}^T)^{-1} {\bf X} \boldsymbol\Sigma_0 & \text{ invert an } n \times n \text{ matrix}
 \end{align*}
 
 \vspace{0.25cm}
 \begin{tiny}
 Wikipedia contributors, ``Woodbury matrix identity,'' Wikipedia, The Free Encyclopedia, \url{http://en.wikipedia.org/w/index.php?title=Woodbury\_matrix\_identity\&oldid=638370219} (accessed April 1, 2015).\par
+$({\bf A}+{\bf U}{\bf C}{\bf V})^{-1} = {\bf A}^{-1} - {\bf A}^{-1} {\bf U}({\bf C}^{-1} + {\bf V}{\bf A}^{-1}{\bf U})^{-1}{\bf V}{\bf A}^{-1}$.\par
 \end{tiny}
-Dimensions of ${\bf X}^T{\bf X}$ are $p \times p$.\par
-Dimensions of ${\bf X} \boldsymbol\Sigma_0 {\bf X}^T$ are $n \times n$.\par
 \end{frame}
 
 \begin{frame}
