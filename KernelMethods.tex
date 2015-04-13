@@ -158,8 +158,39 @@ problem and are preferred.
 \item $\lambda > 0$ balances the two terms
 \end{itemize}
 $\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (SVMs, $\ell_2$-logistic, $\ell_1$-logistic).
-
 \end{frame}
+
+
+\begin{frame}
+\frametitle{Support vector classification}
+\begin{columns}[c]
+\column{0.5\textwidth} SVMs are reasonably fast, accurate and easy to
+tune ($C=10^3$ is a good default, no dramatic failure).\\
+
+Multi-class: One-versus-one, One-versus all.
+
+\par
+%Targets are ${\bf t} \in \{-1,1\}$.\\
+%Solves a quadratic programming problem
+%\begin{align*}
+%\hat{\boldsymbol\alpha} = \argmin_{\boldsymbol\alpha} \tfrac{1}{2} {\boldsymbol\alpha}^T {\bf H}{\boldsymbol\alpha} - \sum_{i=1}^n \alpha_i,\\
+%\text{subject to }
+%{\bf t}^T{\boldsymbol\alpha} = 0 \text{ and }
+%0 \le \alpha_i \le C\\
+%\text{where }
+%{\bf H} = \diag({\bf t}) {\bf X}{\bf X}^T \diag({\bf t})
+%\end{align*}
+%Binary prediction is by:
+%\begin{align*}
+%t_* = sgn(\sum_{i=1}^N t_i \alpha_i {\bf x}_i {\bf x}_*^T + b)
+%\end{align*}
+%where $b$ is a bias term.
+\column{0.5\textwidth}
+\includegraphics[width=\textwidth]{svc}
+\end{columns}
+\end{frame}
+
+
 
 \begin{frame}
 \frametitle{Probabilistic classification}
@@ -207,28 +238,4 @@ Nickisch, Hannes, and Carl Edward Rasmussen. ``Approximations for Binary Gaussia
 \end{tiny}
 \end{frame}
 
-\begin{frame}
-\frametitle{Support vector classification}
-\begin{columns}[c]
-\column{0.5\textwidth}
-If you are only interested in binary predictions, support-vector machines are reasonably fast and accurate.\par
-%Targets are ${\bf t} \in \{-1,1\}$.\\
-%Solves a quadratic programming problem
-%\begin{align*}
-%\hat{\boldsymbol\alpha} = \argmin_{\boldsymbol\alpha} \tfrac{1}{2} {\boldsymbol\alpha}^T {\bf H}{\boldsymbol\alpha} - \sum_{i=1}^n \alpha_i,\\
-%\text{subject to }
-%{\bf t}^T{\boldsymbol\alpha} = 0 \text{ and }
-%0 \le \alpha_i \le C\\
-%\text{where }
-%{\bf H} = \diag({\bf t}) {\bf X}{\bf X}^T \diag({\bf t})
-%\end{align*}
-%Binary prediction is by:
-%\begin{align*}
-%t_* = sgn(\sum_{i=1}^N t_i \alpha_i {\bf x}_i {\bf x}_*^T + b)
-%\end{align*}
-%where $b$ is a bias term.
-\column{0.5\textwidth}
-\includegraphics[width=\textwidth]{svc}
-\end{columns}
-\end{frame}
 
