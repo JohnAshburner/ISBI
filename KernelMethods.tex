@@ -107,6 +107,12 @@ Hyper-parameters $\theta_1$ to $\theta_4$ can be optimised in a number of ways.\
 
 \begin{frame}
 \frametitle{Kernel methods: nonlinear methods}
+\begin{columns}[cc]
+\column{0.6\textwidth}
+\includegraphics[width=\textwidth]{sklearn_material/plot_iris_0012.png}
+\column{0.4\textwidth} Non-linear methods are useful in low-dimension
+to adapt the shape of decision boundaries.
+\end{columns}
 For large $p$, small $n$ problems, nonlinear methods do not seem to help much.\par
 Nonlinearity also reduces interpretability.
 \end{frame}
@@ -123,18 +129,74 @@ where $\sigma$ is some squashing function, eg:
 \item Heaviside step function.
 \item Logistic function (inverse of Logit).
 \item Normal CDF (inverse of Probit).
+\item Hinge loss (support vector machines)
 \end{itemize}
 \column{0.5\textwidth}
 \includegraphics[width=.75\textwidth]{squashing}
+
+\textbf{Bertrand: maybe a distinction should be introduced here between the decision function (typically the sign function) and the loss function used for training.}
+
 \end{columns}
 \end{frame}
+
+\begin{frame}
+\frametitle{Discriminative models for classification: convexity} 
+
+In practice, the hinge and logistic losses yield a convex estimation
+problem and are preferred.
+
+\begin{align*}
+\text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \lambda \mathcal{R} (\mathbf{w})
+\end{align*}
+
+
+(M-estimators framework)
+\begin{itemize}
+\item $\mathcal{L}$ is the loss function (hinge, logistic, quadratic...)
+\item $\mathcal{R}$ is the regularizer (typically a norm on $\mathbf{w}$) 
+\item $\lambda > 0$ balances the two terms
+\end{itemize}
+$\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (SVMs, $\ell_2$-logistic, $\ell_1$-logistic).
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Support vector classification}
+\begin{columns}[c]
+\column{0.5\textwidth} SVMs are reasonably fast, accurate and easy to
+tune ($C=10^3$ is a good default, no dramatic failure).\\
+
+Multi-class: One-versus-one, One-versus all.
+
+\par
+%Targets are ${\bf t} \in \{-1,1\}$.\\
+%Solves a quadratic programming problem
+%\begin{align*}
+%\hat{\boldsymbol\alpha} = \argmin_{\boldsymbol\alpha} \tfrac{1}{2} {\boldsymbol\alpha}^T {\bf H}{\boldsymbol\alpha} - \sum_{i=1}^n \alpha_i,\\
+%\text{subject to }
+%{\bf t}^T{\boldsymbol\alpha} = 0 \text{ and }
+%0 \le \alpha_i \le C\\
+%\text{where }
+%{\bf H} = \diag({\bf t}) {\bf X}{\bf X}^T \diag({\bf t})
+%\end{align*}
+%Binary prediction is by:
+%\begin{align*}
+%t_* = sgn(\sum_{i=1}^N t_i \alpha_i {\bf x}_i {\bf x}_*^T + b)
+%\end{align*}
+%where $b$ is a bias term.
+\column{0.5\textwidth}
+\includegraphics[width=\textwidth]{sklearn_material/plot_separating_hyperplane_0011.png}
+\end{columns}
+\end{frame}
+
+
 
 \begin{frame}
 \frametitle{Probabilistic classification}
 \begin{columns}[c]
 \column{0.5\textwidth}
 Integrating over the uncertainty of the separating hyperplane allows probabilistic predictions further from the training data.\par
-This is not usually done for methods such as the revelance-vector machine (RVM).\par
+This is not usually done for methods such as the relevance-vector machine (RVM).\par
 \vspace{0.25cm}
 \begin{tiny}
 Rasmussen, Carl Edward, and Joaquin Quinonero-Candela. ``Healing the relevance vector machine through augmentation.'' In Proceedings of the 22nd international conference on Machine learning, pp. 689-696. ACM, 2005.\par
@@ -175,28 +237,4 @@ Nickisch, Hannes, and Carl Edward Rasmussen. ``Approximations for Binary Gaussia
 \end{tiny}
 \end{frame}
 
-\begin{frame}
-\frametitle{Support vector classification}
-\begin{columns}[c]
-\column{0.5\textwidth}
-If you are only interested in binary predictions, support-vector machines are reasonably fast and accurate.\par
-%Targets are ${\bf t} \in \{-1,1\}$.\\
-%Solves a quadratic programming problem
-%\begin{align*}
-%\hat{\boldsymbol\alpha} = \argmin_{\boldsymbol\alpha} \tfrac{1}{2} {\boldsymbol\alpha}^T {\bf H}{\boldsymbol\alpha} - \sum_{i=1}^n \alpha_i,\\
-%\text{subject to }
-%{\bf t}^T{\boldsymbol\alpha} = 0 \text{ and }
-%0 \le \alpha_i \le C\\
-%\text{where }
-%{\bf H} = \diag({\bf t}) {\bf X}{\bf X}^T \diag({\bf t})
-%\end{align*}
-%Binary prediction is by:
-%\begin{align*}
-%t_* = sgn(\sum_{i=1}^N t_i \alpha_i {\bf x}_i {\bf x}_*^T + b)
-%\end{align*}
-%where $b$ is a bias term.
-\column{0.5\textwidth}
-\includegraphics[width=\textwidth]{svc}
-\end{columns}
-\end{frame}
 
