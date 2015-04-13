@@ -146,9 +146,11 @@ where $\sigma$ is some squashing function, eg:
 In practice, the hinge and logistic losses yield a convex estimation
 problem and are preferred.
 
-\[
-\text{min}_{\mathbf{w}} \; \mathcal{L}(y,\mathbf{X},\mathbf{w}) + \lambda\mathcal{R}(\mathbf{w})
-\]
+\begin{align*}
+\text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \lambda \mathcal{R} (\mathbf{w})
+\end{align*}
+
+
 (M-estimators framework)
 \begin{itemize}
 \item $\mathcal{L}$ is the loss function (hinge, logistic, quadratic...)
