@@ -1,5 +1,5 @@
 \begin{frame}
-\frametitle{General setting}
+\frametitle{General supervised learning setting}
 We have a training dataset of $n$ observations, each consisting of an input ${\bf x}_i$ and a target $y_i$.\par
 Each input, ${\bf x}_i$, consists of a vector of $p$ features.
 \begin{align*}
@@ -14,7 +14,7 @@ The aim is to predict the target for a new input ${\bf x}_*$.
 \begin{columns}
 \column{0.4\textwidth}
 Targets (${\bf y}$) are categorical labels.\par
-Train with $\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}$ and use result to make best guess of $y_*$ given ${\bf x}_*$.
+Train with $\mathcal{D}$ and use result to make best guess of $y_*$ given ${\bf x}_*$.
 \column{0.6\textwidth}
 \includegraphics[width=\textwidth]{simple_classification}
 \end{columns}
@@ -25,7 +25,7 @@ Train with $\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}$ and use result to make
 \begin{columns}
 \column{0.4\textwidth}
 Targets (${\bf y}$) are categorical labels.\par
-Train with $\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}$ and compute $P(y_*=1 | {\bf x}_*, \mathcal{D})$.
+Train with $\mathcal{D}$ and compute $P(y_*=k | {\bf x}_*, \mathcal{D})$.
 \column{0.6\textwidth}
 \includegraphics[width=\textwidth]{probabilistic_classification}
 \end{columns}
@@ -36,7 +36,7 @@ Train with $\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}$ and compute $P(y_*=1 |
 \begin{columns}
 \column{0.4\textwidth}
 Targets (${\bf y}$) are continuous real variables.\par
-Train with $\mathcal{D} = \{({\bf x}_i,y_i) | i=1,..,n\}$ and compute $p(y_* | {\bf x}_*, \mathcal{D})$.
+Train with $\mathcal{D}$ and compute $p(y_* | {\bf x}_*, \mathcal{D})$.
 \column{0.6\textwidth}
 \includegraphics[width=\textwidth]{regression}
 \end{columns}
@@ -58,11 +58,12 @@ Chu, Wei, and Zoubin Ghahramani. ``Gaussian processes for ordinal regression.'' 
 \begin{frame}
 \frametitle{Multi-Class classification}
 \begin{itemize}
-\item {\bf Multinomial Logistic regression} Theoretically optimal. Expensive optimization. rarely used in practice. 
+\item {\bf Multinomial Logistic regression} Theoretically optimal. Expensive optimization. 
 \item {\bf One-versus-all classification} [SVMs] Among several
   hyperplane, choose the one with maximal margin. \\$\Longrightarrow$
   recommended
-\item {\bf One-versus-one classification} Vote across ech pair of
+\item {\bf One-versus-one classification} Vote across each pair of
   class. Expensive, not optimal.
 \end{itemize}
 \end{frame}
+

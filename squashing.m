@@ -1,11 +1,11 @@
 x = -5:0.01:5;
 
-subplot(3,2,1);
-plot(x,x>0,'k','LineWidth',2);
-xlabel('f_*','Interpreter','tex');
-ylabel('\sigma(f_*)','Interpreter','tex');
-title('Heaviside step function');
-axis([[-5 5] -0.01 1.01]);
+%subplot(3,2,1);
+%plot(x,x>0,'k','LineWidth',2);
+%xlabel('f_*','Interpreter','tex');
+%ylabel('\sigma(f_*)','Interpreter','tex');
+%title('Heaviside step function');
+%axis([[-5 5] -0.01 1.01]);
 %grid on
 
 subplot(3,2,3);
