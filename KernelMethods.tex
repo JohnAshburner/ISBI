@@ -241,22 +241,24 @@ where $\sigma$ is some squashing function, eg:
 
 \begin{frame}
 \frametitle{Discriminative models for classification: convexity}
-
-In practice, the hinge and logistic losses yield a convex estimation
-problem and are preferred.
-
+%
+%Convex losses yield well-defined solution and are preferred.
+%
 \begin{align*}
-\text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \lambda \mathcal{R} (\mathbf{w})
+\text{(M-estimators framework)} \; \; \text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \lambda \mathcal{R} (\mathbf{w})
 \end{align*}
-
-
-(M-estimators framework)
+%
+\begin{columns}[c]
+\column{.6\textwidth}
 \begin{itemize}
 \item $\mathcal{L}$ is the loss function (hinge, logistic, quadratic...)
 \item $\mathcal{R}$ is the regularizer (typically a norm on $\mathbf{w}$)
 \item $\lambda > 0$ balances the two terms
 \end{itemize}
 $\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (SVMs, $\ell_2$-logistic, $\ell_1$-logistic).
+\column{.4\textwidth}
+\includegraphics[width=1.2\textwidth]{sklearn_material/plot_sgd_loss_functions_001.png}
+\end{columns}
 \end{frame}
 
 
@@ -357,8 +359,9 @@ $\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (Ridge, La
 \end{columns}
 \end{frame}
 
+
 \begin{frame}
-\frametitle{Elsastic Net Regression}
+\frametitle{Elastic Net Regression}
 
 \begin{align*}
 \text{min}_{\mathbf{w}} \; \frac{1}{2n} \sum_{i=1}^n \|y_i - \mathbf{X_i}\mathbf{w}\|^2 + \alpha \left( \rho \|\mathbf{w}\|_1 + (1-\rho) \|\mathbf{w}\|^2 \right) 
