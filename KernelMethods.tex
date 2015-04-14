@@ -289,3 +289,90 @@ Multi-class: One-versus-one, One-versus all.
 \end{columns}
 \end{frame}
 
+\begin{frame}
+\frametitle{Convex methods in regression}
+
+(M-estimators framework)
+
+\begin{align*}
+\text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \lambda \mathcal{R} (\mathbf{w})
+\end{align*}
+
+
+\begin{columns}
+\column{0.65\textwidth}
+\begin{itemize}
+\item $\mathcal{L}$ is the loss function (quadratic, $\varepsilon-$insensitive, Huber)
+\item $\mathcal{R}$ is the regularizer (typically a norm on $\mathbf{w}$)
+\item $\lambda > 0$ balances the two terms
+\end{itemize}
+$\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (Ridge, Lasso, Elastic Net regression).
+\column{0.35\textwidth}
+\includegraphics[width=\textwidth]{sklearn_material/losses.png}
+
+\end{columns}
+\end{frame}
+
+%XXX replace lambda with alpha
+
+\begin{frame}
+\frametitle{Ridge Regression}
+
+\begin{align*}
+\text{min}_{\mathbf{w}} \; \frac{1}{2n} \sum_{i=1}^n \|y_i - \mathbf{X_i}\mathbf{w}\|^2 + \alpha \|\mathbf{w}\|^2
+\end{align*}
+
+
+\begin{columns}
+\column{0.4\textwidth}
+\begin{itemize}
+\item Fast, closed-form
+\item Non-sparse solution
+\item $\alpha > 0$ can be set by generalized cross-validation
+\end{itemize}
+\column{0.6\textwidth}
+\includegraphics[width=\textwidth]{sklearn_material/plot_ridge_path_0011.png}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Lasso Regression}
+
+\begin{align*}
+\text{min}_{\mathbf{w}} \; \frac{1}{2n} \sum_{i=1}^n \|y_i - \mathbf{X_i}\mathbf{w}\|^2 + \alpha \|\mathbf{w}\|_1
+\end{align*}
+
+\begin{columns}
+\column{0.4\textwidth}
+\begin{itemize}
+\item Solved by LARS, coordinate descent or proximal
+\item Sparse solution
+\item $\alpha > 0$ harder to tune
+\end{itemize}
+\column{0.6\textwidth}
+\includegraphics[width=\textwidth]{sklearn_material/plot_lasso_model_selection_003.png}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Elsastic Net Regression}
+
+\begin{align*}
+\text{min}_{\mathbf{w}} \; \frac{1}{2n} \sum_{i=1}^n \|y_i - \mathbf{X_i}\mathbf{w}\|^2 + \alpha \left( \rho \|\mathbf{w}\|_1 + (1-\rho) \|\mathbf{w}\|^2 \right) 
+\end{align*}
+
+\begin{columns}
+\column{0.4\textwidth}
+\begin{itemize}
+\item Solved by coordinate descent or proximal
+\item Sparse solution
+\item $\alpha > 0$ and $\rho \in [0,1]$ harder to tune
+\end{itemize}
+\column{0.6\textwidth}
+\includegraphics[width=\textwidth]{sklearn_material/plot_lasso_coordinate_descent_path_0011.png}
+
+\end{columns}
+\end{frame}
