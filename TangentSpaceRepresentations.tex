@@ -21,9 +21,11 @@
 \begin{center}
 \includegraphics[width=\textwidth]{spheres}
 \end{center}
-\begin{tiny}
+%\begin{tiny}
+{\fontsize{0.12cm}{0.1em}\selectfont
 ``Azimuthal Equidistant N90'' by RokerHRO - Own work. Licensed under CC BY-SA 3.0 via Wikimedia Commons - \url{http://commons.wikimedia.org/wiki/File:Azimuthal\_Equidistant\_N90.jpg}\par
-\end{tiny}
+}
+%\end{tiny}
 \end{columns}
 \end{frame}
 
@@ -35,9 +37,9 @@ In practice, we just need to estimate an initial velocity (${\bf v}_0$), from wh
 
 We set the deformation at time 0 to an identity transform (${\boldsymbol\varphi}_0 = id$), and then evolve the following dynamical system for unit time:
 \begin{eqnarray*}
-{\bf u}_{t} = & \det |{\bf D}{\boldsymbol\varphi}_{t}^{-1}| ({\bf D}{\boldsymbol\varphi}_{t}^{-1})^T ({\bf u}_{0} \circ {\boldsymbol\varphi}_{t}^{-1})\cr
-{\bf v}_{t} = & \left({\bf L}^{\dagger}{\bf L}\right)^{-1} {\bf u}_t\cr
-\frac{d {\boldsymbol\varphi}}{d t} = & {\bf v}_t ({\boldsymbol\varphi}_t)
+&{\bf u}_{t} = & \det |{\bf D}{\boldsymbol\varphi}_{t}^{-1}| ({\bf D}{\boldsymbol\varphi}_{t}^{-1})^T ({\bf u}_{0} \circ {\boldsymbol\varphi}_{t}^{-1})\cr
+&{\bf v}_{t} = & \left({\bf L}^{\dagger}{\bf L}\right)^{-1} {\bf u}_t\cr
+&\frac{d {\boldsymbol\varphi}}{d t} = & {\bf v}_t ({\boldsymbol\varphi}_t)
 \end{eqnarray*}
 \column{0.35\textwidth}
 \begin{center}
@@ -93,13 +95,13 @@ Minimising distortions by centering around the mean.
 \begin{frame}
 \frametitle{``Groupwise registration''}
 \begin{columns}[c]
-\column{0.3\textwidth}
+\column{0.4\textwidth}
 Ignoring the many technical details, the procedure involves alternating between:
 \begin{itemize}
 \item Create the mean of aligned images.
 \item Align all images to be slightly closer to the mean.
 \end{itemize}
-\column{0.7\textwidth}
+\column{0.6\textwidth}
 \begin{center}
 \includegraphics[height=.8\textheight]{groupwiseII}
 \end{center}
