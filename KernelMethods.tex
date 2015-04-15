@@ -245,7 +245,7 @@ where $\sigma$ is some squashing function, eg:
 %Convex losses yield well-defined solution and are preferred.
 %
 \begin{align*}
-\text{(M-estimators framework)} \; \; \text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \lambda \mathcal{R} (\mathbf{w})
+\text{(M-estimators framework)} \; \; \text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \alpha \mathcal{R} (\mathbf{w})
 \end{align*}
 %
 \begin{columns}[c]
@@ -253,7 +253,7 @@ where $\sigma$ is some squashing function, eg:
 \begin{itemize}
 \item $\mathcal{L}$ is the loss function (hinge, logistic, quadratic...)
 \item $\mathcal{R}$ is the regularizer (typically a norm on $\mathbf{w}$)
-\item $\lambda > 0$ balances the two terms
+\item $\alpha > 0$ balances the two terms
 \end{itemize}
 $\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (SVMs, $\ell_2$-logistic, $\ell_1$-logistic).
 \column{.4\textwidth}
@@ -297,7 +297,7 @@ Multi-class: One-versus-one, One-versus all.
 (M-estimators framework)
 
 \begin{align*}
-\text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \lambda \mathcal{R} (\mathbf{w})
+\text{min}_{\mathbf{w}} \; \sum_{i=1}^n \mathcal{L}(y_i,\mathbf{X_i},\mathbf{w}) + \alpha \mathcal{R} (\mathbf{w})
 \end{align*}
 
 
@@ -306,7 +306,7 @@ Multi-class: One-versus-one, One-versus all.
 \begin{itemize}
 \item $\mathcal{L}$ is the loss function (quadratic, $\varepsilon-$insensitive, Huber)
 \item $\mathcal{R}$ is the regularizer (typically a norm on $\mathbf{w}$)
-\item $\lambda > 0$ balances the two terms
+\item $\alpha > 0$ balances the two terms
 \end{itemize}
 $\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (Ridge, Lasso, Elastic Net regression).
 \column{0.35\textwidth}
@@ -315,7 +315,6 @@ $\mathcal{L}$ and $\mathcal{R}$ convex $\rightarrow$ unique minimizer (Ridge, La
 \end{columns}
 \end{frame}
 
-%XXX replace lambda with alpha
 
 \begin{frame}
 \frametitle{Ridge Regression}
