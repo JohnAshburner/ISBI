@@ -36,6 +36,19 @@ The {\bf area under the curve} (AUC) is the integral under the ROC curve.\par
 \end{frame}
 
 \begin{frame}
+\frametitle{Accuracy measures from precision-recall curve}
+\begin{columns}
+\column{0.5\textwidth}
+The {\bf precision-recall} (PR) curve is a plot of \emph{relevance} (precision) versus \emph{completeness} (recall) over the full range of possible thresholds.\par
+\vspace{0.25cm}
+The $F_1$ score is the harmonic mean of precision and recall for a given threshold. The AUC can also be used.\par
+\column{0.5\textwidth}
+\includegraphics[width=\textwidth]{sklearn_material/PR}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
 \frametitle{Log predictive probability}
 Some data are more easily classified than others.\par
 Probabilistic classifiers provide a level of confidence for each prediction.
