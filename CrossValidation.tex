@@ -61,5 +61,15 @@ pre-defined grid of parameters and retain the best one.
 \item \textbf{Caveat:} Inner cross-validation loop $\neq$ outer
   cross-validation loop for parameter evaluation.
 \end{itemize}
-\end{frame} 
+\end{frame}
 
+\begin{frame}
+\frametitle{Parameter setting and overfit} 
+
+Using one cross-validation loop for learning parameters and evaluating
+yields \textbf{optimistic bias} and \textbf{poor generalization}:
+Overfit ! {\tiny \url{http://nilearn.github.io/building_blocks/estimator_choice.html}}
+
+\includegraphics[width=.8\textwidth]{sklearn_material/plot_haxby_grid_search_11.png}
+
+\end{frame}
